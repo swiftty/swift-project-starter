@@ -1,0 +1,6 @@
+#!/bin/bash
+
+submodule_url="https://github.com/swiftty/swift-project-starter-impl"
+submodule_path="swift-project-starter-impl"
+
+git clone "$submodule_url" "$submodule_path" -b $(cat version) --depth 1
