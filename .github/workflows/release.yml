@@ -39,6 +39,7 @@ jobs:
         with:
           path: swift-project-starter-impl
           copy-resources: LICENSE
+          macos-archs: arm64
 
   release:
     needs: build
