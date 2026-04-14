@@ -32,7 +32,7 @@ check_version() {
         cp -r $submodule_path/Plugins/* Plugins
         git add Plugins
 
-        git commit -m "update $submodule_path version to $latest_tag"
+        git commit -m "Update $submodule_path version to $latest_tag"
         git push origin HEAD
     fi
 }
