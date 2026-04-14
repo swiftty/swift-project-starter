@@ -1,12 +1,14 @@
 #!/bin/bash
 
+submodule_url="https://github.com/swiftty/swift-project-starter-impl"
 submodule_path="swift-project-starter-impl"
 
 get_latest_tag() {
-    latest_tag=$(gh api \
-        -H "Accept: application/vnd.github+json" \
-        -H "X-GitHub-Api-Version: 2022-11-28" \
-        /repos/swiftty/swift-project-starter-impl/releases/latest | jq -r '.tag_name')
+    git clone "$submodule_url" "$submodule_path"
+    cd "$submodule_path" || exit
+
+    git fetch --tags
+    latest_tag=$(git describe --tags $(git rev-list --tags --max-count=1))
     echo "$latest_tag"
 }
 
