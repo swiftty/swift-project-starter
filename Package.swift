@@ -14,8 +14,8 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "swift-project-starter",
-            url: "https://github.com/swiftty/swift-project-starter/releases/download/0.1.1/swift-project-starter.artifactbundle.zip",
-            checksum: "72bc3b7391391a71ef55d319250a4bb4bd6f62de952e268ae38d7e725cc5ffaa"
+            url: "https://github.com/swiftty/swift-project-starter/releases/download/0.2.0/swift-project-starter.artifactbundle.zip",
+            checksum: "386855ded5af248a99698244b42c48199a34e648710e272485d4313bbed183b6"
         ),
 
         .plugin(
